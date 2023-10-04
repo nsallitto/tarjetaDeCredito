@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+:root {
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-light-grey: hsl(270, 3%, 87%);
+    --clr-dark-grey: hsl(279, 6%, 55%);
+    --clr-very-dark-violet: hsl(278, 68%, 11%);
+}
+
+.container {
+    background-image: url(./images/bg-main-mobile.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+}
+.cards {
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+}
+.cards img {
+    max-width: 100%;
+}
+.frontCard {
+    align-self: start;
+    width: 85%;
+    order: 1;
+    margin-top: -4rem;
+    z-index: 1;
+    position: relative;
+}
+.frontData {
+    font-size: .75rem;
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    padding: 1rem;
+    color: var(--clr-white);
+}
+.frontData img{
+    max-width: 3.5rem;
+}
+.frontNameDate{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    text-transform: uppercase;
+    padding-bottom: .6rem;
+}
+.backCard {
+    align-self: end;
+    width: 85%;
+    position: relative;
+}
+.backData {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-right: 12%;
+    margin-bottom: .8rem;
+    font-size: .75rem;
+    color:   var(--clr-white);
+}
+/* ------------------------------------------------------------------------------------------ */
+/* -------------------------------------------FORMS------------------------------------------ */
+/* ------------------------------------------------------------------------------------------ */
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem;
+    padding-top: 0;
+}
+.formGroup {
+    display: flex;
+    flex-direction: column;
+}
+label {
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    padding-bottom: .3rem;
+    letter-spacing: 1.5px;
+    color: var(--clr-very-dark-violet);
+}
+input {
+    border: 1px solid var(--clr-light-grey);
+    border-radius: .5rem;
+    padding: .70rem;
+}
+input::placeholder {
+    color: var(--clr-light-grey);
+    font-size: .9rem;
+}
+
+.formDateCvc {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .5rem;
+}
+.formDate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.formDateMY{
+    display: flex;
+    gap: .5rem;
+}
+.formDateMY input{
+    width: 100%;
+}
+.formCvc{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.formCvc input {
+    width: 100%;
+}
+.button {
+    background-color: var(--clr-very-dark-violet);
+    color: var(--clr-white);
+    padding: .75rem;
+    font-size: 1.2rem;
+    border-radius: .5rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    border: 0;
+}
+.thankYou {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.thankYouTitle{
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    font-size: 1.4rem;
+    color: var(--clr-very-dark-violet);
+}
+.thankYouText {
+    color: var(--clr-dark-grey);
+}
+.button {
+    width: 80%;
+}
+.disabled {
+    display: none;
+}
+
+/* -------------------------------------------------------------------------------------- */
+/* ----------------------------------------DESKTOP--------------------------------------- */
+/* -------------------------------------------------------------------------------------- */
+
+@media screen and (min-width: 565px) {
+
+    .container {
+        background-image: url(./images/bg-main-desktop.png);
+        background-position: left;
+        background-size: 33% 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        min-height: 100vh;
+    }
+    .cards {
+        padding: 6rem;
+        gap: 2rem;
+        justify-content: center;
+        align-items: end;
+    }
+    .frontCard {
+        order: 1;
+        margin-top: 0;
+        width: 20rem;
+        margin-left: 4rem;
+    }
+    .backCard {
+        order: 2;
+        width: 20rem;
+    }
+    .frontNumber {
+        font-size: 1.3rem;
+        margin-top: 3rem;
+    }
+    /* ------------------------------------------------------------------------------------------------- */
+    /* ---------------------------------------------FORM------------------------------------------------ */
+    /* ------------------------------------------------------------------------------------------------- */
+    .formContainer {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+    }
+    .form {
+        width: 60%;
+    }
+    .button {
+        width: 20rem;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
